@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    body{
+        margin: 0%;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background-color: blueviolet;
+    }
+    .column1{
+        width:50%;
+        height: 90%;
+        align-content: center;
+        
+    }
+    .column2{
+        width: 35%;
+        height: 95%;
+        background-color:white;
+        border-radius: 20px;
+        transition: all 0.20s ease-in-out;
+        cursor: pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        box-shadow: 0px 0px 50px black;
+    }
+    .form_row{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+        gap: 4px;
+    }
+    .form_columns{
+        display: flex;
+        flex-direction: column;
+        margin-left: 70px;
+    }
+    .signup{
+        display: flex;
+        justify-content: center;
+        margin-top: 4%;
+    }
+    .input1{
+        width: 80%;
+        padding: 5px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        border: 2px solid rgb(220, 225, 225);
+        cursor: pointer;
+    }
+    .input2{
+        width: 55%;
+        padding: 5px;
+        border: 2px solid rgb(220, 225, 225);;
+    }
+    .column2:hover{
+        transform: translatey(-8px);
+    }
+    .lion{
+        color: white;
+        animation: movebox 5s linear infinite;
+    }
+    .input1:hover{
+        transform: translateY(-5px);
+    }
+    @keyframes movebox{
+        from{
+            transform:translatex(0px);
+        }
+        to{
+            transform: translateX(300px);
+        }
+    }
+    button{
+        margin-left: 73px;
+        margin-top: 10px;
+        width: 70%;
+        padding: 7px;
+        background-color: aquamarine;
+        border-color: aquamarine;
+        border-radius: 5px;
+        border: none;
+    }
+</style>
+<body>
+   <div class="column1">
+    <div class="lion">
+    <img src="c:\Users\allam\Downloads\village1.jpg" alt="image" style="width: 200px; height: 200px; border-radius: 50%;">
+    <h1>Village Milk Diary</h1>
+    </div>
+    </div> 
+   <div class="column2">
+    <form>
+    
+    <h1 class="signup"> Sign Up Form</h1>
+
+    <div class="form_columns">
+    <label for="user">User name*</label>
+    <input type="text"  id="user" required placeholder="user name" class="input1">
+    </div>
+
+    <div class="form_columns">
+    <label for="frist">Full Name</label>
+    <input type="text" id="frist" required placeholder="Enter Frist name" class="input1">
+    </div>
+
+    <div class="form_columns">
+    <label for="email">Mobile Number</label>
+    <input type="number" id="email" required placeholder="91+xxxxxxxxxx" class="input1"  maxlength="1" minlength="10">
+    </div>
+
+    <div class="form_columns">
+    <label for="passsword">Password</label>
+    <input type="password" id="password" required placeholder=" Enter Password" class="input1">
+    </div>
+
+        <div class="form_columns">
+        <label for="gender">Gender</label>
+        <select id="gender" class="input1" style="width: 83%;">GENDER
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+        </select>
+    </div>
+
+        <div class="form_columns">
+            <label for="address">Address</label>
+            <input type="address" required placeholder=" Enter Address" class="input1">
+        </div>
+
+        <div class="form_row">
+            <select value="country" class="input2" style="margin-left: 70px;">Country
+            <option value="indian">indian</option>
+            <option value="aus">aus</option>
+            <option value="south afev">south afev</option>
+            </select>
+            <input type="pincode" required placeholder="Enter postal code" class="input2" style="margin-left: 25px;">
+        </div>
+
+        <div>
+            <button onclick="gonext()">sumbit</button>
+        </div>
+    </div>
+    </div>
+    </form>
+   </div>
+   <p id="demo"></p>
+   <script>
+    function gonext(){
+        window.open("c:/karthik reddy/HTML/javascript/otp.html");
+    }
+   </script>
+</body>
+</html>
